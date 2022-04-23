@@ -6,11 +6,24 @@
 //
 
 import UIKit
-
+protocol sendDate{
+    func sendDaySelected(date: Date)
+}
 class MainViewController: UIViewController {
     let daysArray = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
     var weeklySelectedDate = Date()
+    var daySelected = Date()
     var totalSquares = [Date]()
+    var selectedIndex : Int?
+    var buttonsPressed : (()->())?
+    let today = Date()
+    var trimmedDay : String?
+    var trimmedMonth : String?
+    var trimmedYear : String?
+    var scelectedDay = Date()
+    var fullDate : String?
+    var delegate: sendDate?
+    var selectedDateFromWeeklyCalender : String?
     @IBOutlet weak var daysCollectionView: UICollectionView!
     @IBOutlet weak var detailsLabel: UILabel!
     
@@ -18,6 +31,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setWeeklyViewFirstTime()
     }
+    
     @IBAction func calendarBtnPressed(_ sender: Any) {
         
     }
@@ -28,6 +42,7 @@ class MainViewController: UIViewController {
     @IBAction func nextBtnPressed(_ sender: Any) {
         weeklySelectedDate = CalendarHelper().addDays(date: weeklySelectedDate, days: 7)
         setWeeklyViewFirstTime()
+
     }
     func setWeeklyViewFirstTime(){
         totalSquares.removeAll()
@@ -129,12 +144,19 @@ class MainViewController: UIViewController {
         detailsLabel.text = CalendarHelper().monthString(date: self.weeklySelectedDate) + " " + CalendarHelper().yearString(date: self.weeklySelectedDate)
         daysCollectionView.reloadData()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewControllerB = segue.destination as? MonthlyCalendarViewController {
+            viewControllerB.selectedDate = daySelected
+            viewControllerB.userSelectedDate = daySelected
             viewControllerB.callback = { date in
                 self.weeklySelectedDate = date
+                self.daySelected = date
+                self.selectedIndex = nil
                 self.setWeeklyView()
+                self.delegate?.sendDaySelected(date: self.daySelected)
             }
+      
         }
     }
 }

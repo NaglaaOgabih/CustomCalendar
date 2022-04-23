@@ -11,14 +11,15 @@ class MonthlyCalendarViewController: UIViewController {
     
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var monthsCollectionView: UICollectionView!
+    var indexPathSelected : Int?
     var callback : ((Date) -> Void)?
     var selectedDate = Date()
+    var userSelectedDate = Date()
     let today = Date()
     var totalSquares = [String]()
     var selectedIndex : Int?
     var selectedDateFromMonthlyCalender : String = ""
     var date : Date?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setMonthView()
@@ -33,7 +34,6 @@ class MonthlyCalendarViewController: UIViewController {
         selectedDate = CalendarHelper().plusMount(date: selectedDate)
         setMonthView()
         selectedIndex = nil
-
     }
     @IBAction func cancelBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -46,6 +46,7 @@ class MonthlyCalendarViewController: UIViewController {
     override var shouldAutorotate: Bool{
         return false
     }
+    
     func setMonthView(){
         totalSquares.removeAll()
         let daysInMonth = CalendarHelper().daysInMonth(date: selectedDate)

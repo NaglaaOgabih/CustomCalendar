@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -68,33 +69,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="66" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KTh-pS-4gt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="78"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aB-OQ-U28">
-                                                            <rect key="frame" x="0.0" y="0.0" width="66" height="31"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <color key="textColor" red="0.37747356300000001" green="0.18315151330000001" blue="0.52943927049999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fe-wg-ikr">
-                                                            <rect key="frame" x="0.0" y="31" width="66" height="47"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                            <color key="textColor" red="0.37747356300000001" green="0.18315151330000001" blue="0.52943927049999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.87934048580000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fe-wg-ikr">
+                                                    <rect key="frame" x="0.0" y="26" width="66" height="52"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.37747356300000001" green="0.18315151330000001" blue="0.52943927049999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aB-OQ-U28">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="26"/>
                                                     <constraints>
-                                                        <constraint firstItem="8aB-OQ-U28" firstAttribute="height" secondItem="KTh-pS-4gt" secondAttribute="height" multiplier="0.4" id="1r1-Tv-0vf"/>
+                                                        <constraint firstAttribute="height" constant="26" id="X4F-tB-k8t"/>
                                                     </constraints>
-                                                </stackView>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.37747356300000001" green="0.18315151330000001" blue="0.52943927049999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="KTh-pS-4gt" firstAttribute="leading" secondItem="ODz-Z6-QXM" secondAttribute="leading" id="52e-hE-4TM"/>
-                                                <constraint firstAttribute="trailing" secondItem="KTh-pS-4gt" secondAttribute="trailing" id="5Uu-mg-Kci"/>
-                                                <constraint firstItem="KTh-pS-4gt" firstAttribute="top" secondItem="ODz-Z6-QXM" secondAttribute="top" id="Mcd-AZ-sQc"/>
-                                                <constraint firstAttribute="bottom" secondItem="KTh-pS-4gt" secondAttribute="bottom" id="h7N-fq-NOg"/>
+                                                <constraint firstItem="8aB-OQ-U28" firstAttribute="top" secondItem="ODz-Z6-QXM" secondAttribute="top" id="CPo-IY-hKt"/>
+                                                <constraint firstAttribute="trailing" secondItem="6fe-wg-ikr" secondAttribute="trailing" id="E8j-jQ-ke4"/>
+                                                <constraint firstItem="8aB-OQ-U28" firstAttribute="leading" secondItem="ODz-Z6-QXM" secondAttribute="leading" id="RV5-nv-AmJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="6fe-wg-ikr" secondAttribute="bottom" id="c4N-sq-fET"/>
+                                                <constraint firstAttribute="trailing" secondItem="8aB-OQ-U28" secondAttribute="trailing" id="jn4-Ua-uyM"/>
+                                                <constraint firstItem="6fe-wg-ikr" firstAttribute="top" secondItem="8aB-OQ-U28" secondAttribute="bottom" id="ukz-5b-90u"/>
+                                                <constraint firstItem="6fe-wg-ikr" firstAttribute="leading" secondItem="ODz-Z6-QXM" secondAttribute="leading" id="vj2-8Q-hqH"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="66" height="78"/>
@@ -118,7 +116,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="Day"/>
                                 <connections>
                                     <action selector="calendarBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C8t-vc-7wG"/>
-                                    <segue destination="nPQ-2X-s4C" kind="presentation" modalPresentationStyle="overCurrentContext" id="m05-bt-Cq9"/>
+                                    <segue destination="nPQ-2X-s4C" kind="presentation" identifier="calendarSegue" modalPresentationStyle="overCurrentContext" id="m05-bt-Cq9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="81.696428571428569"/>
+            <point key="canvasLocation" x="-41" y="82"/>
         </scene>
         <!--Monthly Calendar View Controller-->
         <scene sceneID="ofF-f6-87k">
@@ -193,44 +191,51 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gc-fJ-haL">
                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="20.5"/>
+                                                <color key="backgroundColor" red="0.37700000405311584" green="0.18299999833106995" blue="0.52899998426437378" alpha="0.12990958390835516" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.23385140206173319" green="0.11384982823613513" blue="0.33026067397304781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOS-3n-tSk">
                                                 <rect key="frame" x="59" y="0.0" width="59.5" height="20.5"/>
+                                                <color key="backgroundColor" red="0.37700000405311584" green="0.18299999833106995" blue="0.52899998426437378" alpha="0.12990958390835516" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.23385140206173319" green="0.11384982823613513" blue="0.33026067397304781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dft-Bk-LeK">
                                                 <rect key="frame" x="118.5" y="0.0" width="59" height="20.5"/>
+                                                <color key="backgroundColor" red="0.37700000405311584" green="0.18299999833106995" blue="0.52899998426437378" alpha="0.12990958390835516" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.23385140206173319" green="0.11384982823613513" blue="0.33026067397304781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hko-jZ-Cht">
                                                 <rect key="frame" x="177.5" y="0.0" width="59" height="20.5"/>
+                                                <color key="backgroundColor" red="0.37700000405311584" green="0.18299999833106995" blue="0.52899998426437378" alpha="0.12990958390835516" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.23385140206173319" green="0.11384982823613513" blue="0.33026067397304781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-cX-MSD">
                                                 <rect key="frame" x="236.5" y="0.0" width="59" height="20.5"/>
+                                                <color key="backgroundColor" red="0.37700000405311584" green="0.18299999833106995" blue="0.52899998426437378" alpha="0.12990958390835516" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.23385140206173319" green="0.11384982823613513" blue="0.33026067397304781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0M-KJ-gPJ">
                                                 <rect key="frame" x="295.5" y="0.0" width="59.5" height="20.5"/>
+                                                <color key="backgroundColor" red="0.37700000405311584" green="0.18299999833106995" blue="0.52899998426437378" alpha="0.12990958390835516" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.23385140206173319" green="0.11384982823613513" blue="0.33026067397304781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzp-uY-uek">
                                                 <rect key="frame" x="355" y="0.0" width="59" height="20.5"/>
+                                                <color key="backgroundColor" red="0.37700000405311584" green="0.18299999833106995" blue="0.52899998426437378" alpha="0.12990958390835516" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.23385140206173319" green="0.11384982823613513" blue="0.33026067397304781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -286,8 +291,19 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Cancel">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseForegroundColor" name="CustomPurple"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="CustomPurple"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cancelBtnPressed:" destination="nPQ-2X-s4C" eventType="touchUpInside" id="fk6-8j-VU7"/>
                                                 </connections>
@@ -300,6 +316,11 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="okBtnPressed:" destination="nPQ-2X-s4C" eventType="touchUpInside" id="XfR-6U-viU"/>
                                                 </connections>
@@ -347,6 +368,9 @@
         <image name="Day" width="39" height="38"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <namedColor name="CustomPurple">
+            <color red="0.37700000405311584" green="0.18299999833106995" blue="0.52899998426437378" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
